@@ -19,15 +19,15 @@ const Navigation = () => {
 
                     <div className="col-sm-9 navPart2 d-flex align-items-center">
                         <ul className="list list-inline mr-auto">
-                            <li className="list-inline-item"><Link to='/'>Home</Link></li>
-                            <li className="list-inline-item"><Link to='/'>Fashion</Link></li>
-                            <li className="list-inline-item"><Link to='/'>Electronic</Link></li>
-                            <li className="list-inline-item"><Link to='/'>Bakery</Link></li>
-                            <li className="list-inline-item"><Link to='/'>Grocery</Link></li>
-                            <li className="list-inline-item"><Link to='/'>Mobiles</Link></li>
-                            <li className="list-inline-item"><Link to='/'>Laptop</Link></li>
-                            <li className="list-inline-item"><Link to='/'>Blog</Link></li>
-                            <li className="list-inline-item"><Link to='/'>Contact US</Link></li>
+                            <li className="list-inline-item"><Link to='/'><Button>Home</Button></Link></li>
+                            <li className="list-inline-item"><Link to='/'><Button>Fashion</Button></Link></li>
+                            <li className="list-inline-item"><Link to='/'><Button>Electronic</Button></Link></li>
+                            <li className="list-inline-item"><Link to='/'><Button>Bakery</Button></Link></li>
+                            <li className="list-inline-item"><Link to='/'><Button>Grocery</Button></Link></li>
+                            <li className="list-inline-item"><Link to='/'><Button>Mobiles</Button></Link></li>
+                            <li className="list-inline-item"><Link to='/'><Button>Laptop</Button></Link></li>
+                            <li className="list-inline-item"><Link to='/'><Button>Blog</Button></Link></li>
+                            <li className="list-inline-item"><Link to='/'><Button>Contact US</Button></Link></li>
                         </ul>
                     </div>
                 </div>
