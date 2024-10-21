@@ -10,6 +10,7 @@
 body {
   font-family: "Lato", sans-serif;
   font-size: 14px;
+  color: rgba(0,0,0,0.8);
 }
 button {
   outline: none !important;
@@ -25,6 +26,10 @@ button {
       max-width: 1300px;
   }
 }
+
+.cursor {cursor: pointer;}
+.text-light{color: #a1a1a1 !important}
+.text-sml {font-size: 14px;}
 
 ::-webkit-scrollbar {width: 8px !important; height: 8px !important;}
 ::-webkit-scrollbar-thumb {background: #ccc !important;}
@@ -248,6 +253,8 @@ nav .navPart1 .catWrapper .sidebarNav ul li button {
   text-transform: capitalize !important;
 }
 
+nav .navPart1 .catWrapper .sidebarNav ul li button svg {font-size: 14px; opacity: 0.5;}
+
 nav .navPart1 .catWrapper .sidebarNav ul li button:hover {background: transparent !important;}
 
 nav .allCatTab {
@@ -256,6 +263,31 @@ nav .allCatTab {
   padding: 8px 30px;
   border-radius: 30px !important;
 }
+
+/* nav sidebar submenu */
+nav .navPart1 .catWrapper .sidebarNav ul li {position: static; padding-right: 15px;}
+nav .navPart1 .catWrapper .sidebarNav ul li .submenu {
+  position: absolute;
+  top: 0px;
+  left: 105%;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  border-left: 1px solid rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu {
+  opacity: 1; 
+  visibility: inherit; 
+  left: 100%;
+
+}
+
 
 nav .allCatTab *{
   color: #fff;
@@ -310,17 +342,17 @@ nav .navPart2 ul li a button:hover {
   color: #2bbef9;
 }
 
-nav .navPart2 ul li {position: relative;}
+nav .navPart2 ul li {position: relative; }
 
 nav .navPart2 ul li .submenu {
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: 0px;
   min-width: 200px;
   background: #ffffff;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.15s slide;
+  transition: all 0.2s ease-in-out;
   z-index: 100;
 }
 
@@ -365,8 +397,106 @@ nav .navPart2 ul li:hover .submenu {
 
 .homeBannerSection .slick-arrow.slick-next {right:25px !important; }
 .homeBannerSection .slick-arrow.slick-prev {left:25px !important; }
+.homeBannerSection {cursor: pointer;}
+
+/* homeProducts */
+.homeProducts {padding: 25px 0px; width: 100%;}
+.homeProducts .banner {width: 100%; overflow: hidden; border-radius: 7px;}
+.homeProducts .banner img {border-radius: 7px; width: 85%; height: auto;}
+.productRow .hd {font-size: 22px; font-weight: 600;}
+
+.viewAllBtn {
+  padding: 0px 25px !important;
+  background: #fff;
+  border: 1px solid rgba(94, 94, 94, 0.5) !important;
+  border-radius: 30px !important;
+  color: #494949 !important;
+  font-weight: 500;
+  text-transform: capitalize !important;
+}
+
+.viewAllBtn svg {font-size: 20px;}
 
 
+/* Item product */
+.productItem {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.productItem .badge {
+  display: inline-block;
+  padding: 7px 10px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 100;
+}
+
+.productItem .info {padding: 15px;}
+
+.productItem .info h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.productItem .info .oldPrice {
+  font-size: 16px; 
+  font-weight: bold; 
+  color: rgba(0,0,0,0.5); 
+  text-decoration: line-through;
+
+}
+
+/* css fullcreen and heart */
+.productItem .actions {
+  position: absolute;
+  top: 20px;
+  right: -100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.3s !important;
+}
+
+.productItem .actions button {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  min-width: 50px !important;
+  height: 50px !important;
+  width: 50% !important;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  transition: all 0.0s !important;
+}
+
+.productItem .actions button svg {
+  color: #000 !important; 
+  opacity: 0.7; 
+  pointer-events: none;
+  font-size: 20px;
+}
+
+.productItem .actions button:hover {background: #233a95 !important;}
+.productItem .actions button:hover svg {color: #fff !important}
+.productItem .imgWrapper {overflow: hidden;}
+.productItem .imgWrapper img {transition: all 0.2s ease-in-out;}
+.productItem .imgWrapper:hover .actions {opacity: 1; right: 10px;}
+.productItem .imgWrapper:hover img {transform: scale(1.1);}
+
+/* css boder Items */
+.productItem .info .netPrice {font-size: 18px; font-weight: bold;}
+
+.product_row .productItem {border-right: 1px solid transparent !important;}
+.product_row .swiper-slide:last-child .productItem {border: 1px solid rgba(0,0,0,0.1) !important; }
+.wiper {padding-right: 1px !important;}
+
+.badge-primary {background: #2bbef9;}
 
 
 

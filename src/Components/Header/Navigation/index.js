@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import { FaAngleDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { FaAngleRight } from "react-icons/fa";
 
 
 const Navigation = () => {
@@ -24,8 +25,26 @@ const Navigation = () => {
 
                             <div className={`sidebarNav ${isOpenSidebarVal === true ? 'open' : ''}`}>
                                 <ul>
-                                    <li><Link to='/'><Button>nem</Button></Link></li>
-                                    <li><Link to='/'><Button>women</Button></Link></li>
+                                    <li><Link to='/'><Button>nem <FaAngleRight className="ml-auto"/></Button></Link>
+                                        <div className="submenu">
+                                            <Link to='/'><Button>Clothing</Button></Link>
+                                            <Link to='/'><Button>Footwear</Button></Link>
+                                            <Link to='/'><Button>Watches</Button></Link>
+                                            <Link to='/'><Button>Clothing</Button></Link>
+                                            <Link to='/'><Button>Footwear</Button></Link>
+                                            <Link to='/'><Button>Watches</Button></Link>
+                                        </div>
+                                    </li>
+                                    <li><Link to='/'><Button>women <FaAngleRight className="ml-auto"/></Button></Link>
+                                        <div className="submenu">
+                                            <Link to='/'><Button>Clothing</Button></Link>
+                                            <Link to='/'><Button>Footwear</Button></Link>
+                                            <Link to='/'><Button>Watches</Button></Link>
+                                            <Link to='/'><Button>Clothing</Button></Link>
+                                            <Link to='/'><Button>Footwear</Button></Link>
+                                            <Link to='/'><Button>Watches</Button></Link>
+                                        </div>
+                                    </li>
                                     <li><Link to='/'><Button>watches</Button></Link></li>
                                     <li><Link to='/'><Button>kids</Button></Link></li>
                                     <li><Link to='/'><Button>gift</Button></Link></li>
